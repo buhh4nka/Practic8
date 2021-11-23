@@ -21,7 +21,7 @@ namespace Practic8
         }
         public string ShowInfo()
         {
-            return $"Грузоподъёмность транспорта: {Name}  = {LoadCapacity}";
+            return $"Грузоподъёмность корабля \"{Name}\" = {LoadCapacity} кг.";
         }
         public int CompareTo(object obj)
         {
@@ -32,10 +32,10 @@ namespace Practic8
         }
         public object Clone()
         {
-            CargoShip cloneCargoShip = new CargoShip();
-            cloneCargoShip.Name = this.Name;
-            cloneCargoShip.LoadCapacity = this.LoadCapacity;
-            return cloneCargoShip;
+            CargoShip clone = new CargoShip();
+            clone.Name = this.Name;
+            clone.LoadCapacity = this.LoadCapacity;
+            return clone;
         }
         public CargoShip ShallowClone()
         {

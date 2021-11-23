@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practic8"
         mc:Ignorable="d"
-        Title="MainWindow" Height="245" Width="391">
+        Title="MainWindow" Height="217" Width="455" ResizeMode="CanMinimize">
     <Grid>
         <Menu VerticalAlignment="Top" Height="18">
             <MenuItem HorizontalAlignment="Center" Height="18" Width="73" Header="Программа">
@@ -13,5 +13,32 @@
                 <MenuItem x:Name="exit" Header="Выход" Click="exit_Click"></MenuItem>
             </MenuItem>
         </Menu>
+        <GroupBox Header="Второй корабль" Margin="149,23,0,0" Height="143" VerticalAlignment="Top" HorizontalAlignment="Left" Width="122">
+            <Grid>
+                <TextBox x:Name="ship2Name" HorizontalAlignment="Center" Margin="0,23,0,0" Text="Беда" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
+                <TextBox x:Name="ship2loadCapacity" HorizontalAlignment="Center" Margin="0,74,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97"/>
+                <TextBlock HorizontalAlignment="Center" Margin="0,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TextAlignment="Center"><Run Language="ru-ru" Text="Название:"/></TextBlock>
+                <TextBlock HorizontalAlignment="Center" Margin="0,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Height="21" RenderTransformOrigin="0.409,0.546" TextAlignment="Center"><Run Text="Грузоподъёмность"/><Run Language="ru-ru" Text=":"/></TextBlock>
+                <Button x:Name="ship2Info" Content="Информация" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top" Width="97" Click="ship2Info_Click"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Информация" Margin="282,23,0,0" HorizontalAlignment="Left" Width="140" Height="143" VerticalAlignment="Top">
+            <Grid>
+                <TextBox x:Name="outCompare" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" IsReadOnly="True" Height="92"/>
+                <Button x:Name="startCompare" Content="Сравнить судна" HorizontalAlignment="Center" VerticalAlignment="Top" Width="98" Click="compareShips_Click" Margin="0,97,0,0"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Первый корабль" Margin="17,23,0,0" Height="143" VerticalAlignment="Top" HorizontalAlignment="Left" Width="122">
+            <Grid>
+                <TextBox x:Name="ship1Name" HorizontalAlignment="Center" Margin="0,23,0,0" Text="Победа" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
+                <TextBox x:Name="ship1loadCapacity" HorizontalAlignment="Center" Margin="0,74,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97"/>
+                <TextBlock HorizontalAlignment="Center" Margin="0,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TextAlignment="Center"><Run Language="ru-ru" Text="Название:"/></TextBlock>
+                <TextBlock HorizontalAlignment="Center" Margin="0,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Height="21" RenderTransformOrigin="0.409,0.546" TextAlignment="Center"><Run Text="Грузоподъёмность"/><Run Language="ru-ru" Text=":"/></TextBlock>
+                <Button x:Name="ship1Info" Content="Информация" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top" Width="97" Click="ship1Info_Click"/>
+
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
